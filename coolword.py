@@ -50,7 +50,7 @@ def segoholin(word):
     return new_word.replace("y","i").replace("c","s")
 
 
-def yoohet(word1, word2):
+def yrab(word1, word2):
     rev_word1 = word1[::-1]
     rev_word2 = word2[::-1]
 
@@ -60,7 +60,7 @@ def yoohet(word1, word2):
             if rev_word2[i] == rev_word1[j]:
                 common_index = (i, j)
 
-    if common_index == None:
+    if common_index is None:
         return rev_word2[:len(rev_word2)//2] + rev_word1[:len(rev_word1)//2]
 
     return rev_word2[:common_index[0]] + rev_word1[common_index[1]:]
@@ -68,4 +68,4 @@ def yoohet(word1, word2):
 
 if __name__ == '__main__':
     print(segoholin("technology"))
-    print(yoohet("technology","chwinrwang"))
+    print(yrab("bamfon","diary"))
